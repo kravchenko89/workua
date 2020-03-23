@@ -68,7 +68,7 @@ def main():
                     f'Описание: {description}\n'
                 ]
             )
-            # save_db(work_path, vacancy, wage, company, address, description)
+            save_db(work_path, vacancy, wage, company, address, description)
             # create_db(work_path, vacancy, wage, company, address, description)
 
             json_db.append({'job vacancy':
@@ -77,13 +77,13 @@ def main():
                     'Вакансия': vacancy,
                     'Зарплата': wage,
                     'Компания': company,
-                    'Город': address,
-                    'Описание': description,
+                    'Город': address.replace('\n', ''),
+                    'Описание': description.replace('\n', ''),
                 }
             })
             json_save(json_db)
 
-        # save_info(result)
+        save_info(result)
 
 
 if __name__ == "__main__":
