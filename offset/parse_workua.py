@@ -9,7 +9,7 @@ from path import HOST, ROOT_PATH
 
 
 def main():
-    page = 1737
+    page = 0
 
     while True:
         page += 1
